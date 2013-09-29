@@ -5,11 +5,13 @@
   });
 
   function addSearchBehavior() {
-    var inputEl = $('#search_input');
+    var inputEl = $('#search_input'),
+        isResquestBeingPerformed = false;
     $('#search').click(function() {
-      if (!isInputValid(inputEl.val())) {
+      if (!isInputValid(inputEl.val()) || isResquestBeingPerformed) {
         return false;
       }
+      isResquestBeingPerformed = true;
 
       var postData = {
         name: inputEl.val()
@@ -20,6 +22,8 @@
 
         updateSearchResult($.trim(inputEl.val()).toUpperCase(), data.chart_data);
         updateProbabilityResult(data.probability);
+
+        isResquestBeingPerformed = false;
       });
 
       return false;
