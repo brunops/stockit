@@ -66,7 +66,7 @@ helpers do
   def get_all_matching_dates(stock)
     percentages_array = closing_percentage_changes(stock)
     percentage_to_match = percentages_array.last[CHANGE_INDEX]
-    percentage_range_to_match = ((percentage_to_match-0.05)..(percentage_to_match+0.5))
+    percentage_range_to_match = ((percentage_to_match-0.05)..(percentage_to_match+0.05))
     percentages_array.select { |current_percentage| percentage_range_to_match.include? current_percentage[CHANGE_INDEX] }
   end
 
