@@ -1,33 +1,19 @@
-
 .container {
 	background-image: url("http://www.carrentals.co.uk/blog/wp-content/uploads/2008/11/stock-market.jpg");
-	background-color: green;
 	font-family: 'Montserrat Alternates', sans-serif;
 	background-repeat:no-repeat;
   background-size:cover;
-  /*-webkit-filter: blur(2px);*/
   height: 900px;
-}
-
-#logo {
-	font-size: 3.8em;
-	color: white;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.5);
-	font-weight: bold;
 }
 
 .main {
 	color: white;
 	background-color: rgba(0, 0, 0, 0.5);
 	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
 }
 
 .ticker {
+	font-size: 125%;
 	text-align: center;
 	height: 50px;
 	border-radius: 8px;
@@ -37,6 +23,10 @@
 	margin-left: auto;
 	margin-right: auto;
 	border-radius: 8px;
+}
+
+.pure-button-xlarge {
+  font-size: 125%;
 }
 
 .prompt {
