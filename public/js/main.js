@@ -31,7 +31,8 @@
   }
 
   function updateProbabilityResult(probability) {
-    $('#search_result').addClass(probability[1]).html(probability[0]);
+    $('.future_projections').css('visibility', 'visible');
+    $('#probability').html('<span class="' + probability[1] + '">' + probability[0] + '</span>');
   }
 
   function updateSearchResult(stock, data) {
@@ -57,4 +58,5 @@
   function isInputValid(value) {
     return $.trim(value) !== "";
   }
+
 })(jQuery);
