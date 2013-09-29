@@ -1,10 +1,12 @@
 (function($) {
 
   $(function() {
-    addSearchBehavior();
+    //addSearchBehavior();
 
     $('#search').on('click', function(){
-      $('.main').fadeOut();
+      $('#search_result').append("1.20");
+      // $('#search_result').append("<img class='up_arrow animated css' src='https://cdn1.iconfinder.com/data/icons/musthave/256/Stock%20Index%20Up.png'/>")
+      $('#graph_result').append("<img src='http://www.onlineproxy.com/burlington/2000/p-img/stock-graph-1.gif'/>");
     });
   });
 
