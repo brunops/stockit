@@ -8,10 +8,12 @@
     var inputEl = $('#search_input'),
         isResquestBeingPerformed = false;
     $('#search').click(function() {
+      var searchButton = $(this);
       if (!isInputValid(inputEl.val()) || isResquestBeingPerformed) {
         return false;
       }
       isResquestBeingPerformed = true;
+      searchButton.addClass('loading');
 
       var postData = {
         name: inputEl.val()
@@ -24,6 +26,7 @@
         updateProbabilityResult(data.probability);
 
         isResquestBeingPerformed = false;
+        searchButton.removeClass('loading');
       });
 
       return false;
@@ -32,7 +35,7 @@
 
   function updateProbabilityResult(probability) {
     $('.future_projections').css('visibility', 'visible');
-    $('#probability').html('<span class="' + probability[1] + '">' + probability[0] + '</span>');
+    $('#probability').html('<span class="' + probability[1] + '">' + probability[0] + '%</span>');
   }
 
   function updateSearchResult(stock, data) {
