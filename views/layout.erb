@@ -4,16 +4,21 @@
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
 
   <title>Stock It!</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+  <script src="http://code.highcharts.com/stock/highstock.js"></script>
+  <script src="http://code.highcharts.com/stock/modules/exporting.js"></script>
+
+
+
   <script src="js/main.js"></script>
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
-	<link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/application.css">
 </head>
 <body>
-	<div class="container">
-  	<%= yield %>
+  <div class="container">
+    <%= yield %>
 	</div>
 </body>
 </html>
