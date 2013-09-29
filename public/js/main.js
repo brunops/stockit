@@ -2,6 +2,10 @@
 
   $(function() {
     addSearchBehavior();
+
+    $('#search').on('click', function(){
+      $('.main').fadeOut();
+    });
   });
 
   function addSearchBehavior() {
@@ -57,4 +61,5 @@
   function isInputValid(value) {
     return $.trim(value) !== "";
   }
+
 })(jQuery);
