@@ -44,7 +44,13 @@ helpers do
      get_highest_probability(up_days_count,(all_matching_dates.length-1))
   end
 
-  def get_highest_probability(up_days, total_days)
+  def get_highest_probability(up_days, total_days) 
+    prob =  ((up_days.to_f / total_days) * 100 ).round(2) 
+    if prob < 50
+      [100 - prob, "down"]
+    else
+      [prob, "up"]
+    end
   end
   
   def get_all_matching_dates(stock)
