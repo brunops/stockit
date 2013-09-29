@@ -70,7 +70,7 @@ helpers do
   end
 
   def closing_percentage_changes(stock)
-    data = years_of_data(stock, 3)
+    data = years_of_data(stock, 5)
     changed_percentage = []
     data.reverse.each_cons(2) do |current, previous|
       changed_percentage << [
