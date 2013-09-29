@@ -18,14 +18,12 @@
 	font-size: 120%;
 	text-align: center;
 	height: 50px;
-	border-radius: 8px;
 }
 
 .pure-button {
 	margin-left: auto;
 	margin-right: auto;
-	border-radius: 8px;
-	line-height: 1.5em;
+  line-height: 1.5em;
 }
 
 .pure-button-xlarge {
