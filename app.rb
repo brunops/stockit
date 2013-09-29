@@ -1,7 +1,6 @@
 require "sinatra"
 require "net/http"
 require "json"
-require 'pry'
 
 get '/' do
   erb :home
