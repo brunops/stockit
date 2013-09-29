@@ -80,3 +80,9 @@ h1, h4{
 	color: red;
 }
 
+.loading {
+	background-image: url('../images/ajax-loader.gif');
+	background-size: 16px 16px;
+	background-repeat:no-repeat;
+	background-position: right center;
+}
