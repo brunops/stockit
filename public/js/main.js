@@ -1,13 +1,7 @@
 (function($) {
 
   $(function() {
-    //addSearchBehavior();
-
-    $('#search').on('click', function(){
-      $('#search_result').append("1.20");
-      // $('#search_result').append("<img class='up_arrow animated css' src='https://cdn1.iconfinder.com/data/icons/musthave/256/Stock%20Index%20Up.png'/>")
-      $('#graph_result').append("<img src='http://www.onlineproxy.com/burlington/2000/p-img/stock-graph-1.gif'/>");
-    });
+    addSearchBehavior();
   });
 
   function addSearchBehavior() {
@@ -37,7 +31,8 @@
   }
 
   function updateProbabilityResult(probability) {
-    $('#search_result').addClass(probability[1]).html(probability[0]);
+    $('.future_projections').css('visibility', 'visible');
+    $('#probability').html('<span class="' + probability[1] + '">' + probability[0] + '</span>');
   }
 
   function updateSearchResult(stock, data) {
