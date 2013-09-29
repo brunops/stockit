@@ -8,10 +8,12 @@
     var inputEl = $('#search_input'),
         isResquestBeingPerformed = false;
     $('#search').click(function() {
+      var searchButton = $(this);
       if (!isInputValid(inputEl.val()) || isResquestBeingPerformed) {
         return false;
       }
       isResquestBeingPerformed = true;
+      searchButton.addClass('loading');
 
       var postData = {
         name: inputEl.val()
@@ -24,6 +26,7 @@
         updateProbabilityResult(data.probability);
 
         isResquestBeingPerformed = false;
+        searchButton.removeClass('loading');
       });
 
       return false;
