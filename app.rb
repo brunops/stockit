@@ -49,7 +49,7 @@ helpers do
 
   def matching_dates
     percentage_to_match = 2.25
-    percentage_range_to_match = ((percentage_to_match-.05)..(percentage_to_match+0.5))
+    percentage_range_to_match = ((percentage_to_match-0.05)..(percentage_to_match+0.5))
     percentages_array = closing_percentage_changes
     percentages_array.select { |current_percentage| percentage_range_to_match.include? current_percentage["change"] }
   end
