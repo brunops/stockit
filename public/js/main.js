@@ -35,7 +35,7 @@
 
   function updateProbabilityResult(probability) {
     $('.future_projections').css('visibility', 'visible');
-    $('#probability').html('<span class="' + probability[1] + '">' + probability[0] + '</span>');
+    $('#probability').html('<span class="' + probability[1] + '">' + probability[0] + '%</span>');
   }
 
   function updateSearchResult(stock, data) {
