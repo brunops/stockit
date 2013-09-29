@@ -7,7 +7,7 @@ get '/' do
 end
 
 post '/stocks' do
-  closing_percentage_changes(params[:name])
+  JSON.dump(closing_percentage_changes(params[:name]))
 end
 
 helpers do
@@ -38,15 +38,30 @@ helpers do
 
   def closing_percentage_changes(stock)
     data = years_of_data(stock, 3)
+    changed_percentage = []
+    data.reverse.each_cons(2) do |current, previous|
+      changed_percentage << {
+        'date' => current['date'],
+        'change' => daily_closing_percentage_change(current['Adj_Close'], previous['Adj_Close'])
+      }
+    end
+    changed_percentage.reverse
+  end
+
+  def daily_closing_percentage_change(today_value, yesterday_value)
+    ((yesterday_value.to_f * 100) / today_value.to_f) - 100
   end
 
   def years_of_data(stock, years)
+    current_year = Time.now.year
+    i = 0
     data = []
-    while (years > 0) do
-      current_year_data = get_historical_data_for(stock, years)
-      p current_year_data.length
-      data += current_year_data if current_year_data
-      years = years - 1
+    while (i < years) do
+      current_year_data = get_historical_data_for(stock, current_year - i)
+      break if current_year_data.nil?
+
+      data += current_year_data
+      i = i + 1
     end
 
     data
