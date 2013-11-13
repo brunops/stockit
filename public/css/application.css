@@ -3,6 +3,7 @@ body, html {
 	padding: 0;
 	color: whiteSmoke;
 	font-family: 'Lucida-Grande', sans-serif;
+	font-weight: 100;
 }
 
 .main {
@@ -22,7 +23,7 @@ body, html {
 	margin-left: auto;
 	margin-right: auto;
   line-height: 1.5em;
-  background-color: #5C636B;
+  background-color: #5D6369;
   font-weight: 100;
 }
 
@@ -41,7 +42,8 @@ h2, h4{
 }
 
 h4 {
-	margin: 0 auto;
+	margin: .2em auto;
+	font-size: .8em;
 }
 
 #search_result {
@@ -68,13 +70,13 @@ h4 {
 	margin: 1em auto;
 	width: 350px;
 	height: 130px;
-	background-color: #5C636B;
+	background-color: #5D6369;
 	font-size: 3em;
 	padding: .4em;
 }
 
 .up {
-	color: green;
+	color: #47A870;
 }
 
 .down {

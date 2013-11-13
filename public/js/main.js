@@ -44,7 +44,7 @@
         selected : 1
       },
       chart: {
-        backgroundColor: '#FCFFC5'
+        backgroundColor: '#F5F5F5'
       },
 
       title : {
