@@ -43,6 +43,9 @@
       rangeSelector : {
         selected : 1
       },
+      chart: {
+        backgroundColor: '#F5F5F5'
+      },
 
       title : {
         text : stock + ' Stock Percentage Change at Close'
