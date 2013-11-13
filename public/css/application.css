@@ -1,17 +1,15 @@
-
-.container {
-	background-image: url("http://www.carrentals.co.uk/blog/wp-content/uploads/2008/11/stock-market.jpg");
+body, html {
+	margin: 0;
+	padding: 0;
+	color: whiteSmoke;
 	font-family: 'Lucida-Grande', sans-serif;
-	font-weight: lighter;
-	background-repeat:no-repeat;
-  background-size:cover;
-  height: 900px;
 }
 
 .main {
-	color: white;
-	background-color: rgba(0, 0, 0, 0.7);
+	float: left;
+	background-color: #47A870;
 	text-align: center;
+	min-height: 1020px;
 }
 
 .ticker {
@@ -24,6 +22,8 @@
 	margin-left: auto;
 	margin-right: auto;
   line-height: 1.5em;
+  background-color: #5C636B;
+  font-weight: 100;
 }
 
 .pure-button-xlarge {
@@ -33,27 +33,29 @@
 .prompt {
 	font-size: 3.5em;
 	text-align: center;
-	text-shadow: 4px 4px #242424;
 }
 
-h1, h4{
-	margin: 0;
-	font-family: 'Lucida-Grande', sans-serif;
-	font-weight: lighter;
+h2, h4{
+	margin: .5em auto;
+	font-weight: 100;
+}
+
+h4 {
+	margin: 0 auto;
 }
 
 #search_result {
 	font-size: 3em;
-	background-color: white;
+	background-color: whiteSmoke;
 	color: green;
 	width: 258px;
 	margin: 0 auto;
-	border-radius: 8px;
 }
 
 #result_chart {
 	width: 90%;
 	margin: 0 auto;
+	min-height: 0;
 }
 
 .future_projections {
@@ -63,16 +65,11 @@ h1, h4{
 }
 
 .day {
+	margin: 1em auto;
 	width: 350px;
 	height: 130px;
-	background-color: rgba(76, 141, 252, 0.7);
-	background-color: rgba(240, 240, 250, 0.7);
-	text-shadow: 2px 2px #242424;
-	display: inline-block;
-	padding: auto;
-	border-radius: 8px;
+	background-color: #5C636B;
 	font-size: 3em;
-	margin-bottom: 20px;
 	padding: .4em;
 }
 
@@ -81,7 +78,7 @@ h1, h4{
 }
 
 .down {
-	color: red;
+	color: rgb(255, 82, 82);
 }
 
 .loading {
